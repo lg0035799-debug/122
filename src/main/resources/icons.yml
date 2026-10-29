@@ -1,0 +1,7 @@
+# 아이콘 이름 -> 폰트 코드포인트(16진수). 새 아이콘은 자동으로 추가됩니다.
+default: "E2FF"
+skill_cheonma_slash: "E300"
+skill_cheonma_wave: "E301"
+skill_cheonma_whirl: "E302"
+skill_fist_strike: "E303"
+skill_fist_burst: "E304"

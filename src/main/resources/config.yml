@@ -1,0 +1,22 @@
+# 무기 숙련도 종류 (id: 표시 이름). 비급/스킬 조건의 proficiency 키로 사용
+proficiency-types:
+  sword: "검술"
+  blade: "도법"
+  spear: "창술"
+  fist: "권법"
+  bow: "궁술"
+
+# 신규 플레이어 기본 수치
+default-stats:
+  internal-power: 10   # 내공
+  external-power: 10   # 외공
+  proficiency: 0
+
+# 기력(스킬 사용 시 소모되는 자원)
+qi:
+  base: 50
+  per-internal-power: 1.0   # 최대 기력 = base + 내공 * 이 값
+  regen-per-second: 2.0
+
+skill-mode:
+  block-actions: true   # 스킬 모드 중 공격/상호작용 차단

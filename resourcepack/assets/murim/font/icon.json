@@ -1,0 +1,58 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "murim:font/skill/default.png",
+      "ascent": -24,
+      "height": 16,
+      "chars": [
+        "\ue2ff"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "murim:font/skill/skill_cheonma_slash.png",
+      "ascent": -24,
+      "height": 16,
+      "chars": [
+        "\ue300"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "murim:font/skill/skill_cheonma_wave.png",
+      "ascent": -24,
+      "height": 16,
+      "chars": [
+        "\ue301"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "murim:font/skill/skill_cheonma_whirl.png",
+      "ascent": -24,
+      "height": 16,
+      "chars": [
+        "\ue302"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "murim:font/skill/skill_fist_strike.png",
+      "ascent": -24,
+      "height": 16,
+      "chars": [
+        "\ue303"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "murim:font/skill/skill_fist_burst.png",
+      "ascent": -24,
+      "height": 16,
+      "chars": [
+        "\ue304"
+      ]
+    }
+  ]
+}

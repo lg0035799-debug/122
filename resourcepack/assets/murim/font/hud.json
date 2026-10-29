@@ -1,0 +1,70 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        "\uf801": -1,
+        "\uf901": 1,
+        "\uf802": -2,
+        "\uf902": 2,
+        "\uf804": -4,
+        "\uf904": 4,
+        "\uf808": -8,
+        "\uf908": 8,
+        "\uf810": -16,
+        "\uf910": 16,
+        "\uf820": -32,
+        "\uf920": 32,
+        "\uf840": -64,
+        "\uf940": 64,
+        "\uf880": -128,
+        "\uf980": 128
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "murim:font/slot_normal.png",
+      "ascent": -23,
+      "height": 18,
+      "chars": [
+        "\ue000"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "murim:font/slot_cooldown.png",
+      "ascent": -23,
+      "height": 18,
+      "chars": [
+        "\ue001"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "murim:font/slot_empty.png",
+      "ascent": -23,
+      "height": 18,
+      "chars": [
+        "\ue002"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "murim:font/digits.png",
+      "ascent": -28,
+      "height": 8,
+      "chars": [
+        "\ue200\ue201\ue202\ue203\ue204\ue205\ue206\ue207\ue208\ue209\ue20a"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "murim:font/digits.png",
+      "ascent": -25,
+      "height": 8,
+      "chars": [
+        "\ue210\ue211\ue212\ue213\ue214\ue215\ue216\ue217\ue218\ue219\ue21a"
+      ]
+    }
+  ]
+}

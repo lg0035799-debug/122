@@ -1,0 +1,30 @@
+id: cheongwon_fist
+name: "청원권법"
+material: IRON_AXE
+description:
+  - "기초적인 권법 비급."
+register_requirements:
+  external_power: 20
+  proficiency:
+    fist: 10
+skills:
+  - id: fist_strike
+    name: "직격권"
+    mythic_skill: "FistStrike"
+    icon: "skill_fist_strike"
+    cooldown: 4
+    cost_qi: 8
+    description: ["정면을 강하게 가격한다."]
+    learn_requirements:
+      external_power: 20
+      proficiency: { fist: 10 }
+  - id: fist_burst
+    name: "폭권"
+    mythic_skill: "FistBurst"
+    icon: "skill_fist_burst"
+    cooldown: 12
+    cost_qi: 25
+    description: ["기를 폭발시켜 주변을 밀쳐낸다."]
+    learn_requirements:
+      external_power: 45
+      proficiency: { fist: 40 }

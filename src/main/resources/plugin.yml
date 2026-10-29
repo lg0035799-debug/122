@@ -1,0 +1,14 @@
+name: MurimSkills
+version: '0.1.0'
+main: kr.murim.skills.MurimPlugin
+api-version: '1.21'
+depend: [MythicMobs]
+description: 무협 RPG 무공 비급 / 스킬 시스템
+commands:
+  murim:
+    description: 무공 시스템 명령어
+    aliases: [무공, mg]
+    usage: /murim [menu|mode|stat|set|reload|genfont]
+permissions:
+  murim.admin:
+    default: op

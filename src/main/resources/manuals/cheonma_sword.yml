@@ -1,0 +1,42 @@
+id: cheonma_sword
+name: "천마검법"
+material: IRON_SWORD
+description:
+  - "천마신교에 전해지는 검법 비급."
+register_requirements:
+  internal_power: 20
+  external_power: 15
+  proficiency:
+    sword: 10
+skills:
+  - id: cheonma_slash
+    name: "천마참"
+    mythic_skill: "CheonmaSlash"
+    icon: "skill_cheonma_slash"
+    cooldown: 6
+    cost_qi: 10
+    description: ["전방을 크게 베어낸다."]
+    learn_requirements:
+      internal_power: 20
+      proficiency: { sword: 10 }
+  - id: cheonma_wave
+    name: "천마검기"
+    mythic_skill: "CheonmaWave"
+    icon: "skill_cheonma_wave"
+    cooldown: 10
+    cost_qi: 20
+    description: ["검기를 날려 먼 적을 벤다."]
+    learn_requirements:
+      internal_power: 40
+      proficiency: { sword: 30 }
+  - id: cheonma_whirl
+    name: "천마선풍"
+    mythic_skill: "CheonmaWhirl"
+    icon: "skill_cheonma_whirl"
+    cooldown: 15
+    cost_qi: 30
+    description: ["회전하며 주변 적을 벤다."]
+    learn_requirements:
+      internal_power: 60
+      external_power: 40
+      proficiency: { sword: 50 }

@@ -1,0 +1,26 @@
+# plugins/MythicMobs/Skills/ 에 넣어서 사용하는 "예시" 스킬입니다. 수치/타게터는 서버에 맞게 조정하세요.
+CheonmaSlash:
+  Skills:
+  - effect:particle{p=sweep_attack;a=1} @Self
+  - sound{s=entity.player.attack.sweep} @Self
+  - damage{a=10} @EntitiesInRadius{r=4}
+
+CheonmaWave:
+  Skills:
+  - sound{s=entity.player.attack.sweep} @Self
+  - damage{a=14} @EntitiesInRadius{r=6}
+
+CheonmaWhirl:
+  Skills:
+  - effect:particle{p=sweep_attack;a=6;hs=2;vs=0.5} @Self
+  - damage{a=18} @EntitiesInRadius{r=5}
+
+FistStrike:
+  Skills:
+  - sound{s=entity.player.attack.strong} @Self
+  - damage{a=8} @EntitiesInRadius{r=3}
+
+FistBurst:
+  Skills:
+  - effect:particle{p=explosion;a=1} @Self
+  - damage{a=16} @EntitiesInRadius{r=5}
