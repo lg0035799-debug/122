@@ -81,7 +81,7 @@ public final class IconRegistry {
         for (var e : codepoints.entrySet()) {
             sb.append("    {\"type\":\"bitmap\",\"file\":\"murim:font/skill/").append(e.getKey())
               .append(".png\",\"ascent\":").append(HudRenderer.ICON_ASCENT)
-              .append(",\"height\":16,\"chars\":[\"\\u").append(String.format("%04X", e.getValue())).append("\"]}");
+              .append(",\"height\":").append(HudRenderer.ICON_HEIGHT).append(",\"chars\":[\"\\u").append(String.format("%04X", e.getValue())).append("\"]}");
             sb.append(++i < codepoints.size() ? ",\n" : "\n");
         }
         sb.append("  ]\n}\n");

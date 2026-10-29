@@ -21,7 +21,8 @@ import java.util.UUID;
 public final class HudRenderer {
     static final Key HUD_FONT = Key.key("murim", "hud");
     static final Key ICON_FONT = Key.key("murim", "icon");
-    public static final int ICON_ASCENT = -24;
+    public static final int ICON_ASCENT = 14;   // = 슬롯 ascent(16) - 2
+    public static final int ICON_HEIGHT = 20;
 
     // hud.json 글리프
     private static final String SLOT_NORMAL = "\uE000";
@@ -30,9 +31,13 @@ public final class HudRenderer {
     private static final int CD_DIGIT_BASE = 0xE200;   // 쿨타임 숫자 (0~9, 10='.')
     private static final int LABEL_DIGIT_BASE = 0xE210; // 키 번호 라벨
 
-    private static final int SLOT_ADV = 19;   // 18px 슬롯 + 1px
-    private static final int ICON_ADV = 17;   // 16px 아이콘 + 1px
-    private static final int PITCH = 20;      // 슬롯 간격(px)
+    private static final int SLOT_W = 24;               // 슬롯 크기(px)
+    private static final int SLOT_ADV = SLOT_W + 1;     // 글리프 advance = 폭 + 1
+    private static final int ICON_ADV = 21;             // 20px 아이콘 + 1
+    private static final int PITCH = 26;                // 슬롯 간격(px)
+    private static final int ICON_INSET = 2;
+    private static final int LABEL_INSET = 3;
+    private static final int LABEL_ADV = 6;             // 5px 숫자 + 1
 
     private static final TextColor LABEL = TextColor.color(0xCCCCCC);
     private static final TextColor DARK = TextColor.color(0x555555);
@@ -62,30 +67,32 @@ public final class HudRenderer {
 
             bar.glyph(def == null ? SLOT_EMPTY : cd ? SLOT_COOLDOWN : SLOT_NORMAL, HUD_FONT, NamedTextColor.WHITE, SLOT_ADV);
             if (def != null) {
-                bar.moveTo(x + 1);
+                bar.moveTo(x + ICON_INSET);
                 bar.glyph(plugin.icons().glyph(def.icon()), ICON_FONT, cd ? DARK : NamedTextColor.WHITE, ICON_ADV);
             }
             if (cd) {
                 String t = formatCooldown(rem);
                 int w = -1;
                 for (char c : t.toCharArray()) w += adv(c);
-                bar.moveTo(x + (18 - w) / 2);
+                bar.moveTo(x + (SLOT_W - w) / 2);
                 for (char c : t.toCharArray()) {
                     int idx = c == '.' ? 10 : c - '0';
                     bar.glyph(String.valueOf((char) (CD_DIGIT_BASE + idx)), HUD_FONT, NamedTextColor.WHITE, adv(c));
                 }
             } else {
-                bar.moveTo(x + 2);
-                bar.glyph(String.valueOf((char) (LABEL_DIGIT_BASE + i + 1)), HUD_FONT, LABEL, 6);
+                bar.moveTo(x + LABEL_INSET);
+                bar.glyph(String.valueOf((char) (LABEL_DIGIT_BASE + i + 1)), HUD_FONT, LABEL, LABEL_ADV);
             }
         }
+        // 전체 폭을 실제 그려진 폭과 맞춰야 액션바가 정중앙에 온다
+        bar.moveTo((PlayerData.SLOT_COUNT - 1) * PITCH + SLOT_ADV);
         return bar.build();
     }
 
-    private static int adv(char c) { return c == '.' ? 2 : 6; }
+    private static int adv(char c) { return c == '.' ? 3 : 11; }  // 쿨타임 숫자: 글자폭 10(+1), '.'는 2(+1)
 
     private static String formatCooldown(long ms) {
-        if (ms >= 10_000) return String.valueOf((ms + 999) / 1000);
+        if (ms >= 10_000) return String.valueOf(Math.min(99, (ms + 999) / 1000));
         return String.format(Locale.ROOT, "%.1f", ms / 1000.0);
     }
 

@@ -24,8 +24,8 @@
     {
       "type": "bitmap",
       "file": "murim:font/slot_normal.png",
-      "ascent": -23,
-      "height": 18,
+      "ascent": 16,
+      "height": 24,
       "chars": [
         "\ue000"
       ]
@@ -33,8 +33,8 @@
     {
       "type": "bitmap",
       "file": "murim:font/slot_cooldown.png",
-      "ascent": -23,
-      "height": 18,
+      "ascent": 16,
+      "height": 24,
       "chars": [
         "\ue001"
       ]
@@ -42,26 +42,26 @@
     {
       "type": "bitmap",
       "file": "murim:font/slot_empty.png",
-      "ascent": -23,
-      "height": 18,
+      "ascent": 16,
+      "height": 24,
       "chars": [
         "\ue002"
       ]
     },
     {
       "type": "bitmap",
-      "file": "murim:font/digits.png",
-      "ascent": -28,
-      "height": 8,
+      "file": "murim:font/digits_cd.png",
+      "ascent": 12,
+      "height": 16,
       "chars": [
         "\ue200\ue201\ue202\ue203\ue204\ue205\ue206\ue207\ue208\ue209\ue20a"
       ]
     },
     {
       "type": "bitmap",
-      "file": "murim:font/digits.png",
-      "ascent": -25,
-      "height": 8,
+      "file": "murim:font/digits_label.png",
+      "ascent": 13,
+      "height": 16,
       "chars": [
         "\ue210\ue211\ue212\ue213\ue214\ue215\ue216\ue217\ue218\ue219\ue21a"
       ]
